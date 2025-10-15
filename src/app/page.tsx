@@ -720,9 +720,14 @@ export default function FunilRedacaoEnem() {
               <div className="text-4xl font-bold text-red-600 mb-2">
                 R$ 29,90
               </div>
-              <div className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold inline-block">
+              <a 
+                href="https://pay.kirvano.com/f3e14b37-66e1-4da3-b0a9-93f05d23114f"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold inline-block hover:bg-red-600 transition-colors duration-300"
+              >
                 🔥 OFERTA LIMITADA 🔥
-              </div>
+              </a>
             </div>
           </div>
 
