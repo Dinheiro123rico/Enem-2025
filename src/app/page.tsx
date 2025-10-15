@@ -16,7 +16,7 @@ export default function FunilRedacaoEnem() {
   const [showAnimation, setShowAnimation] = useState(false)
   const [isClient, setIsClient] = useState(false)
 
-  const totalSteps = 11
+  const totalSteps = 10
   const progress = (currentStep / totalSteps) * 100
 
   // Corrigir problema de hidratação
@@ -668,7 +668,7 @@ export default function FunilRedacaoEnem() {
     )
   }
 
-  // Etapa 10: Oferta especial
+  // Etapa 10: Oferta especial (antiga etapa 10, agora é a final)
   if (currentStep === 10) {
     const benefits = [
       "📝 Modelos de redação nota 1000",
@@ -724,7 +724,7 @@ export default function FunilRedacaoEnem() {
                 href="https://pay.kirvano.com/f3e14b37-66e1-4da3-b0a9-93f05d23114f"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold inline-block hover:bg-red-600 transition-colors duration-300"
+                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold inline-block transition-colors duration-300"
               >
                 🔥 OFERTA LIMITADA 🔥
               </a>
@@ -740,102 +740,18 @@ export default function FunilRedacaoEnem() {
             </p>
           </div>
 
-          <button
-            onClick={nextStep}
+          <a
+            href="https://pay.kirvano.com/f3e14b37-66e1-4da3-b0a9-93f05d23114f"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 animate-pulse"
           >
             QUERO MINHA NOTA 1000! <Trophy className="w-5 h-5" />
-          </button>
+          </a>
 
           <p className="text-center text-xs text-gray-500 mt-3">
             🔒 Pagamento 100% seguro • Acesso imediato
           </p>
-        </div>
-      </div>
-    )
-  }
-
-  // Etapa 11: Checkout
-  if (currentStep === 11) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-green-500 via-emerald-500 to-teal-500 flex items-center justify-center p-4 pt-20 relative overflow-hidden">
-        {renderProgressBar()}
-        
-        {/* Efeitos de celebração */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 text-4xl animate-bounce">🎉</div>
-          <div className="absolute top-32 right-16 text-3xl animate-pulse">✨</div>
-          <div className="absolute bottom-40 left-20 text-5xl animate-spin">🏆</div>
-          <div className="absolute bottom-20 right-10 text-4xl animate-bounce">🚀</div>
-        </div>
-
-        <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 max-w-md w-full shadow-2xl relative z-10">
-          <div className="text-center mb-8">
-            <div className="text-6xl mb-4 animate-bounce">🎊</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Parabéns, {userName}! 🎉
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Falta só um passo para destravar sua nota 1000!
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-6 rounded-xl mb-6">
-            <div className="text-center mb-4">
-              <h3 className="text-xl font-bold text-green-800 mb-2">
-                🏆 GUIA REDAÇÃO ENEM 1000
-              </h3>
-              <div className="text-3xl font-bold text-green-600">
-                R$ 29,90
-              </div>
-              <p className="text-sm text-green-700 mt-1">
-                Acesso imediato após o pagamento
-              </p>
-            </div>
-          </div>
-
-          <div className="space-y-4 mb-6">
-            <div className="bg-gray-50 p-4 rounded-xl">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email para acesso:
-              </label>
-              <input
-                type="email"
-                placeholder="seu@email.com"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-green-500 focus:outline-none transition-all duration-300"
-                autoComplete="email"
-              />
-            </div>
-
-            <div className="bg-gray-50 p-4 rounded-xl">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Método de pagamento:
-              </label>
-              <div className="space-y-2">
-                <button className="w-full p-3 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 transition-colors">
-                  💳 Cartão de Crédito
-                </button>
-                <button className="w-full p-3 bg-green-500 text-white rounded-xl font-medium hover:bg-green-600 transition-colors">
-                  📱 PIX (Desconto 5%)
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 animate-pulse">
-            FINALIZAR COMPRA - R$ 29,90 <Crown className="w-5 h-5" />
-          </button>
-
-          <div className="mt-6 text-center">
-            <div className="flex items-center justify-center gap-2 text-green-600 mb-2">
-              <CheckCircle className="w-5 h-5" />
-              <span className="text-sm font-medium">Pagamento 100% seguro</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-green-600">
-              <CheckCircle className="w-5 h-5" />
-              <span className="text-sm font-medium">Acesso imediato</span>
-            </div>
-          </div>
 
           <div className="mt-6 bg-gradient-to-r from-yellow-100 to-green-100 p-4 rounded-xl text-center">
             <p className="text-green-700 font-bold text-sm">
